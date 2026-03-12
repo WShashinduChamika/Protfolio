@@ -1,4 +1,5 @@
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 const highlights = [
   {
@@ -33,21 +34,38 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
           <div className="space-y-8">
-            <div className="animate-fade-in">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
                 About Me
               </span>
-            </div>
+            </motion.div>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground"
+            >
               Building the future,
               <span className="font-serif italic font-normal text-white">
                 {" "}
                 one component at a time.
               </span>
-            </h2>
+            </motion.h2>
 
-            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="space-y-4 text-muted-foreground"
+            >
               <p>
                 I'm a passionate software engineer with over 5 years of
                 experience crafting digital products that make a difference. My
@@ -66,24 +84,33 @@ export const About = () => {
                 contributing to open-source projects, or sharing knowledge with
                 the developer community.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="glass rounded-2xl p-6 glow-border"
+            >
               <p className="text-lg font-medium italic text-foreground">
                 "My mission is to create digital experiences that are not just
                 functional, but truly delightful — products that users love to
                 use and developers love to maintain."
               </p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Column - Hilights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="glass p-6 rounded-2xl animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="glass p-6 rounded-2xl"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
@@ -92,7 +119,7 @@ export const About = () => {
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

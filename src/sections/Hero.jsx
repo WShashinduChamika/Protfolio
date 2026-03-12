@@ -8,6 +8,7 @@ import {
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { motion } from "framer-motion";
 
 const skills = [
   "React",
@@ -66,16 +67,25 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
-            <div className="animate-fade-in">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Software Engineer • React Specialist
               </span>
-            </div>
+            </motion.div>
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              >
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences with
@@ -83,16 +93,26 @@ export const Hero = () => {
                 <span className="font-serif italic font-normal text-white">
                   precision.
                 </span>
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-lg text-muted-foreground max-w-lg"
+              >
                 Hi, I'm Pedro Machado — a software engineer specializing in
                 React, Next.js, and TypeScript. I build scalable, performant web
                 applications that users love.
-              </p>
+              </motion.p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex flex-wrap gap-4"
+            >
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
@@ -100,10 +120,15 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
-            </div>
+            </motion.div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex items-center gap-4"
+            >
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: Github, href: "#" },
@@ -118,10 +143,15 @@ export const Hero = () => {
                   {<social.icon className="w-5 h-5" />}
                 </a>
               ))}
-            </div>
+            </motion.div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="relatice"
+          >
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -132,7 +162,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src="/profile-photo2.png"
                   alt="Pedro Machado"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -155,11 +185,16 @@ export const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-20"
+        >
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
@@ -182,12 +217,14 @@ export const Hero = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1, repeat: Infinity, repeatType: "reverse", repeatDelay: 2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <a
           href="#about"
@@ -196,7 +233,7 @@ export const Hero = () => {
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };

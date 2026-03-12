@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const experiences = [
   {
     period: "2022 — Present",
@@ -48,15 +50,23 @@ export const Experience = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <span
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="text-secondary-foreground text-sm
-           font-medium tracking-wider uppercase animate-fade-in"
+           font-medium tracking-wider uppercase"
           >
             Career Journey
-          </span>
-          <h2
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold
-           mt-4 mb-6 animate-fade-in animation-delay-100
+           mt-4 mb-6
             text-secondary-foreground"
           >
             Experience that{" "}
@@ -64,15 +74,18 @@ export const Experience = () => {
               {" "}
               speaks volumes.
             </span>
-          </h2>
+          </motion.h2>
 
-          <p
-            className="text-muted-foreground
-           animate-fade-in animation-delay-200"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-muted-foreground"
           >
             A timeline of my professional growth, from curious beginner to
             senior engineer leading teams and building products at scale.
-          </p>
+          </motion.p>
         </div>
 
         {/* Timeline */}
@@ -82,10 +95,13 @@ export const Experience = () => {
           {/* Experience Items */}
           <div className="space-y-12">
             {experiences.map((exp, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 150}ms` }}
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                className="relative grid md:grid-cols-2 gap-8"
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
@@ -129,7 +145,7 @@ export const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

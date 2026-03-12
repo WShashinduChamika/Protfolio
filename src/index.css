@@ -23,6 +23,21 @@
   --color-surface: #1a2329;
 }
 
+/* Light mode overrides */
+html.light {
+  --color-background: #f8f9fa;
+  --color-foreground: #0f1418;
+  --color-card: #ffffff;
+  --color-primary: #1a9e99;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e8edf2;
+  --color-secondary-foreground: #1a9e99;
+  --color-muted: #edf2f7;
+  --color-muted-foreground: #576574;
+  --color-border: #dde3ea;
+  --color-surface: #edf2f7;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -36,6 +51,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .font-serif {
