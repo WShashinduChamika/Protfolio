@@ -6,29 +6,49 @@ import {
   Linkedin,
   Twitter,
   Download,
+  Cloud,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { motion } from "framer-motion";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiNodedotjs,
+  SiGraphql,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiDocker,
+  SiVercel,
+  SiTailwindcss,
+  SiPrisma,
+  SiJest,
+  SiCypress,
+  SiFigma,
+  SiGit,
+  SiGithubactions,
+} from "react-icons/si";
 
 const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
-  "Git",
-  "GitHub Actions",
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Redis", icon: SiRedis, color: "#FF4438" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "AWS", icon: Cloud, color: "#FF9900" },
+  { name: "Vercel", icon: SiVercel, color: "#ffffff" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+  { name: "Jest", icon: SiJest, color: "#C21325" },
+  { name: "Cypress", icon: SiCypress, color: "#69D3A7" },
+  { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+  { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
 ];
 
 export const Hero = () => {
@@ -74,7 +94,7 @@ export const Hero = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Software Engineer • Web Development Specialist
               </span>
             </motion.div>
 
@@ -98,11 +118,16 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-lg text-muted-foreground max-w-lg"
+                className="text-lg text-muted-foreground max-w-lg leading-relaxed"
               >
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I&apos;m{" "}
+                <span className="text-foreground font-medium">Shashindu Chamika</span>
+                {" "}— a software engineer specializing in{" "}
+                <span className="text-primary">React, Next.js, Flutter,</span> and{" "}
+                <span className="text-primary">Node.js</span>. I build scalable,
+                high-performance web and mobile applications with modern technologies
+                like TypeScript, Express.js, MongoDB, and MySQL, focusing on creating
+                reliable systems and great user experiences.
               </motion.p>
             </div>
 
@@ -113,9 +138,11 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="flex flex-wrap gap-4"
             >
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
@@ -178,7 +205,7 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">2+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>
@@ -209,9 +236,16 @@ export const Hero = () => {
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
+                <div
+                  key={idx}
+                  className="shrink-0 flex items-center gap-2 px-8 py-4 group cursor-default"
+                >
+                  <skill.icon
+                    className="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity"
+                    style={{ color: skill.color }}
+                  />
+                  <span className="text-base font-semibold text-muted-foreground/50 group-hover:text-muted-foreground transition-colors">
+                    {skill.name}
                   </span>
                 </div>
               ))}
