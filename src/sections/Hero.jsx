@@ -241,7 +241,7 @@ export const Hero = () => {
                   className="shrink-0 flex items-center gap-2 px-8 py-4 group cursor-default"
                 >
                   <skill.icon
-                    className="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity"
+                    className="w-14 h-14 opacity-50 group-hover:opacity-100 transition-opacity"
                     style={{ color: skill.color }}
                   />
                   <span className="text-base font-semibold text-muted-foreground/50 group-hover:text-muted-foreground transition-colors">
