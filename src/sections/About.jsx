@@ -4,26 +4,27 @@ import { motion } from "framer-motion";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Clean Architecture",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Building maintainable and scalable systems using modern development practices.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Performance Focus",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Creating fast and responsive applications optimized for real-world users.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Team Collaboration",
+    description:
+      "Working effectively with teams to design, build, and deliver reliable software.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Continuous Learning",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Exploring new technologies and improving skills to stay relevant in the tech industry.",
   },
 ];
 
@@ -32,6 +33,7 @@ export const About = () => {
     <section id="about" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
           {/* Left Column */}
           <div className="space-y-8">
             <motion.div
@@ -52,10 +54,9 @@ export const About = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground"
             >
-              Building the future,
+              Building scalable solutions,
               <span className="font-serif italic font-normal text-white">
-                {" "}
-                one component at a time.
+                {" "}one system at a time.
               </span>
             </motion.h2>
 
@@ -67,22 +68,26 @@ export const About = () => {
               className="space-y-4 text-muted-foreground"
             >
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I'm <strong>Shashindu Chamika</strong>, an undergraduate software developer
+                passionate about building modern web and mobile applications.
+                My journey in software development started with curiosity about
+                how digital systems work and evolved into hands-on experience
+                developing full-stack applications.
               </p>
+
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I work with technologies such as <strong>React, Next.js, Flutter,
+                Node.js, Express, MongoDB, and MySQL</strong>, building systems
+                that are scalable, maintainable, and user-focused. I enjoy
+                solving complex problems and transforming ideas into functional
+                software solutions.
               </p>
+
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Beyond coding, I continuously explore new technologies,
+                contribute to projects, and focus on improving my skills as a
+                software engineer while preparing for a professional career in
+                the tech industry.
               </p>
             </motion.div>
 
@@ -94,14 +99,13 @@ export const About = () => {
               className="glass rounded-2xl p-6 glow-border"
             >
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "My goal is to build reliable software that solves real-world
+                problems while creating meaningful user experiences."
               </p>
             </motion.div>
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <motion.div
@@ -122,6 +126,7 @@ export const About = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
