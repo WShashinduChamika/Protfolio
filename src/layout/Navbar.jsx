@@ -7,8 +7,8 @@ import { useTheme } from "@/context/ThemeContext";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#certificates", label: "Certificates" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
 ];
 
 export const Navbar = () => {
