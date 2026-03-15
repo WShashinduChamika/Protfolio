@@ -1,9 +1,25 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
+import { SiHackerrank, SiWhatsapp } from "react-icons/si";
+
+const WHATSAPP_NUMBER = "94740288198";
+const WHATSAPP_MESSAGE = "Hi Shashindu, I saw your portfolio and would like to connect.";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE
+)}`;
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/WShashinduChamika", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/shashindu-chamika-a5517330a/",
+    label: "LinkedIn",
+  },
+  {
+    icon: SiHackerrank,
+    href: "https://www.hackerrank.com/profile/shashinduchamik2",
+    label: "HackerRank",
+  },
+  { icon: SiWhatsapp, href: WHATSAPP_URL, label: "WhatsApp" },
 ];
 
 const footerLinks = [
@@ -49,6 +65,8 @@ export const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noreferrer"
                 aria-label={social.label}
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >
