@@ -1,42 +1,43 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { motion } from "framer-motion";
+
 const projects = [
+  // {
+  //   title: "Explainable Tire Defect Detection System",
+  //   description:
+  //     "A deep learning system for automated tire defect detection and severity assessment. Uses EfficientNet-B0 to classify defect types and locations, with Grad-CAM and SHAP providing explainable AI visualizations for safety-focused analysis.",
+  //   image: "/projects/tire-defect.png",
+  //   tags: ["Python", "TensorFlow", "OpenCV", "EfficientNet", "SHAP", "Grad-CAM"],
+  //   link: "#",
+  //   github: "#",
+  // },
   {
-    title: "Fintech Dashboard",
+    title: "AQUO Smart Agricultural Monitoring System",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
+      "An IoT-based smart agriculture system that helps farmers monitor and control irrigation and fertilization using real-time sensor and weather data through a Flutter mobile application.",
+    image: "/projects/AQUA.png",
+    tags: ["Flutter", "Firebase", "Arduino", "OpenWeather API", "Google Maps"],
     link: "#",
-    github: "#",
+    github: "https://github.com/WShashinduChamika/MiniProject-AQUO-",
   },
   {
-    title: "E-Commerce Platform",
+    title: "MasterMindEd Course Registration Platform",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+      "A full-stack web application that allows students to review and register for courses while administrators manage course content, users, and system activities.",
+    image: "/projects/MasterMindEd.png",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
     link: "#",
-    github: "#",
+    github: "https://github.com/WShashinduChamika/Master-Mind",
   },
   {
-    title: "AI Writing Assistant",
+    title: "S&N Meals Food Ordering Mobile App",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+      "A mobile food ordering application that enables users to browse restaurants, place orders, and pay online while restaurants manage orders and operations through the backend system.",
+    image: "/projects/SNMeals.png",
+    tags: ["Flutter", "Express.js", "MongoDB"],
     link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/WShashinduChamika/SN-Meals",
   },
 ];
 
