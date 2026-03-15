@@ -1,0 +1,37 @@
+Shashindu Chamika
+Software Engineer
+
+Email: your.email@example.com
+Phone: +94 XX XXX XXXX
+Location: Sri Lanka
+Portfolio: https://your-portfolio-url.com
+GitHub: https://github.com/your-username
+LinkedIn: https://www.linkedin.com/in/your-profile
+
+Summary
+Software engineer focused on building scalable web and mobile applications with modern technologies.
+
+Skills
+- React, Next.js, Flutter
+- Node.js, Express.js
+- TypeScript, JavaScript, Java, Python
+- MongoDB, MySQL, SQL
+- AWS, Vercel, Git, GitHub Actions
+
+Experience
+- Associate Software Engineer, Freelancing Development Team (Jun 2025 - Present)
+- Associate Software Engineer, Ceyentra Technologies (Mar 2025 - May 2025)
+- Trainee Software Engineer, Ceyentra Technologies (Aug 2024 - Feb 2025)
+
+Certifications
+- AWS Educate Introduction to Cloud 101
+- Career Essentials in Software Development by Microsoft and LinkedIn
+- Introduction to Generative AI
+- React Basic
+- JavaScript Basic
+- SQL Basic
+- Java Basic
+- Python Basic
+
+Note
+Replace this placeholder file with your final CV (PDF recommended) while keeping the same file name/path.

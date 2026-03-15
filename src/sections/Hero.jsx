@@ -51,7 +51,18 @@ const skills = [
   { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
 ];
 
+const CV_DOWNLOAD_PATH = "/Shashindu-Chamika-CV.pdf";
+
 export const Hero = () => {
+  const handleCvDownload = () => {
+    const link = document.createElement("a");
+    link.href = CV_DOWNLOAD_PATH;
+    link.setAttribute("download", "Shashindu-Chamika-CV.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -143,7 +154,7 @@ export const Hero = () => {
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton onClick={handleCvDownload}>
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
