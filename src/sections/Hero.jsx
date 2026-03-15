@@ -4,7 +4,6 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
   Download,
   Cloud,
 } from "lucide-react";
@@ -28,6 +27,8 @@ import {
   SiFigma,
   SiGit,
   SiGithubactions,
+  SiHackerrank,
+  SiWhatsapp,
 } from "react-icons/si";
 
 const skills = [
@@ -52,6 +53,11 @@ const skills = [
 ];
 
 const CV_DOWNLOAD_PATH = "/Shashindu-Chamika-CV.pdf";
+const WHATSAPP_NUMBER = "94740288198";
+const WHATSAPP_MESSAGE = "Hi Shashindu, I saw your portfolio and would like to connect.";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE
+)}`;
 
 export const Hero = () => {
   const handleCvDownload = () => {
@@ -169,13 +175,25 @@ export const Hero = () => {
             >
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/WShashinduChamika", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/shashindu-chamika-a5517330a/", label: "LinkedIn" },
+                {
+                  icon: SiHackerrank,
+                  href: "https://www.hackerrank.com/profile/shashinduchamik2",
+                  label: "HackerRank",
+                },
+                {
+                  icon: SiWhatsapp,
+                  href: WHATSAPP_URL,
+                  label: "WhatsApp",
+                },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
